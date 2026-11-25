@@ -1,4 +1,3 @@
-// The broadcaster languages Twitch lists lives under, as TypeType-Live accepts them.
 export const TWITCH_LANGUAGES = [
   "AR",
   "ASL",
@@ -41,7 +40,6 @@ export type TwitchLanguage = (typeof TWITCH_LANGUAGES)[number];
 
 const known = new Set<string>(TWITCH_LANGUAGES);
 
-// Keeps stored values the server still knows, once each, in list order.
 export function sanitizeLanguages(value: unknown): TwitchLanguage[] {
   if (!Array.isArray(value)) return [];
   const chosen = new Set(value.filter((code): code is string => typeof code === "string"));
@@ -54,12 +52,10 @@ export function toggleLanguage(current: TwitchLanguage[], code: TwitchLanguage):
     : sanitizeLanguages([...current, code]);
 }
 
-// The value of the language query parameter; undefined means every language.
 export function languageQuery(languages: readonly string[]): string | undefined {
   return languages.length > 0 ? languages.join(",").toLowerCase() : undefined;
 }
 
-// BCP 47 tag Intl knows for a Twitch code; OTHER has none.
 function languageTag(code: TwitchLanguage): string | null {
   if (code === "OTHER") return null;
   if (code === "ASL") return "ase";

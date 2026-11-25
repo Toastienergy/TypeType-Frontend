@@ -2262,5 +2262,6 @@
   "focus_entertainment_conflict": "专注生效期间，不能将娱乐分组中的频道移入学习分组。",
   "twitch_language_filter": "语言",
   "twitch_language_all": "所有语言",
+  "twitch_language_count": "{count} 种语言",
   "twitch_language_other": "其他"
 }

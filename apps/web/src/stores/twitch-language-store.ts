@@ -3,7 +3,6 @@ import { persist } from "zustand/middleware";
 import { sanitizeLanguages, type TwitchLanguage, toggleLanguage } from "../lib/twitch-language";
 
 type TwitchLanguageStore = {
-  // Empty lists lives of every language.
   languages: TwitchLanguage[];
   toggle: (code: TwitchLanguage) => void;
   clear: () => void;

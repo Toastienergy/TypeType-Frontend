@@ -2262,5 +2262,6 @@
   "focus_entertainment_conflict": "Entertainment channels cannot be added to your study group while Focus is active.",
   "twitch_language_filter": "Language",
   "twitch_language_all": "All languages",
+  "twitch_language_count": "{count} languages",
   "twitch_language_other": "Other"
 }

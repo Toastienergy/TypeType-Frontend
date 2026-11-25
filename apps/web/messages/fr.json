@@ -2262,5 +2262,6 @@
   "focus_entertainment_conflict": "Les chaînes de divertissement ne peuvent pas rejoindre le groupe d'étude pendant le Focus.",
   "twitch_language_filter": "Langue",
   "twitch_language_all": "Toutes les langues",
+  "twitch_language_count": "{count} langues",
   "twitch_language_other": "Autre"
 }

@@ -2262,5 +2262,6 @@
   "focus_entertainment_conflict": "Unterhaltungskanäle können im aktiven Fokus nicht zur Lerngruppe hinzugefügt werden.",
   "twitch_language_filter": "Sprache",
   "twitch_language_all": "Alle Sprachen",
+  "twitch_language_count": "{count} Sprachen",
   "twitch_language_other": "Andere"
 }

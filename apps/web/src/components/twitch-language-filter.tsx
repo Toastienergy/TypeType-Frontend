@@ -8,7 +8,6 @@ import { useTwitchLanguageStore } from "../stores/twitch-language-store";
 
 const MARGIN = 8;
 
-// Narrows every list of Twitch lives to the chosen broadcaster languages.
 export function TwitchLanguageFilter() {
   const languages = useTwitchLanguageStore((state) => state.languages);
   const toggle = useTwitchLanguageStore((state) => state.toggle);
@@ -32,7 +31,7 @@ export function TwitchLanguageFilter() {
       ? m.twitch_language_all()
       : languages.length === 1
         ? (options.find((option) => option.code === languages[0])?.label ?? languages[0])
-        : `${languages.length}`;
+        : m.twitch_language_count({ count: languages.length });
 
   useLayoutEffect(() => {
     if (!open || !anchorRef.current || !panelRef.current) return;
